@@ -118,7 +118,7 @@ disqusShortname = ""
     [[params.tiles.showcase]]
       title = "2016 US elections"
       subtitle = "Top cities and candidates monetarily"
-      image = "pic05.jpg"
+      image = "elections.jpg"
       url = "projects/elections"
 
     [[params.tiles.showcase]]
