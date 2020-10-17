@@ -107,13 +107,13 @@ disqusShortname = ""
       title = "Gaining while acting green?"
       subtitle = "Academic Research"
       image = "thesis.jpg"
-      url = "projects"
+      url = "projects/thesis"
 
     [[params.tiles.showcase]]
-      title = "Ipsum"
-      subtitle = "Nisl Sed Aliquam"
-      image = "pic04.jpg"
-      url = "blogs/ipsum"
+      title = "Covid-19"
+      subtitle = "Insights into the pandemic"
+      image = "covid.jpg"
+      url = "projects/covid"
 
     [[params.tiles.showcase]]
       title = "Consequat"
