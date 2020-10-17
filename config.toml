@@ -98,16 +98,16 @@ disqusShortname = ""
       url = "aboutme"
 
     [[params.tiles.showcase]]
+      title = ""
+      subtitle = ""
+      image = ""
+      url = ""
+
+    [[params.tiles.showcase]]
       title = "Gaining while acting green?"
       subtitle = "Academic Research"
       image = "thesis.jpg"
       url = "projects"
-
-    [[params.tiles.showcase]]
-      title = "Magna"
-      subtitle = "Lorem Etiam Nullam"
-      image = "pic03.jpg"
-      url = "blogs/magna"
 
     [[params.tiles.showcase]]
       title = "Ipsum"
