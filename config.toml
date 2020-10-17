@@ -98,10 +98,10 @@ disqusShortname = ""
       url = "aboutme"
 
     [[params.tiles.showcase]]
-      title = ""
-      subtitle = ""
-      image = ""
-      url = ""
+      title = "Lifestyle"
+      subtitle = "Healthy routines"
+      image = "health.jpg"
+      url = "health"
 
     [[params.tiles.showcase]]
       title = "Gaining while acting green?"
