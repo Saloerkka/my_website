@@ -52,12 +52,12 @@ disqusShortname = ""
       url = "aboutme"
 
     [[params.navigation.links]]
-      name = "Generic Blog"
-      url = "projects/thesis"
+      name = "My lifestyle"
+      url = "health"
 
     [[params.navigation.links]]
-      name = "Elements"
-      url = "elements.html"
+      name = "Projects"
+      url = "projects"
 
     # Add custom links here by uncommenting code below. To remove links just delete
     # the [[params.navigation.links]] map associated with that link. Copy and paste
@@ -123,7 +123,7 @@ disqusShortname = ""
 
     [[params.tiles.showcase]]
       title = "Yield curve analysis"
-      subtitle = "Curve inversion in the current environment"
+      subtitle = "current low rate environment"
       image = "yield.jpg"
       url = "projects/yield"
     # You can make more showcases by copy and pasting the code above
