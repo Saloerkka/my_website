@@ -37,8 +37,8 @@ disqusShortname = ""
 
   # Navigation Section
   [params.navigation]
-    title = "Forty"
-    subtitle = "By HTML5 Up"
+    title = "Erkka Salo"
+    subtitle = "website portfolio"
     menu = "Menu"
     # Optional logo as brand stored in img/
     # logo = "logo.png"
@@ -48,12 +48,12 @@ disqusShortname = ""
       url = "#"
 
     [[params.navigation.links]]
-      name = "I fuck your bitch long dicks style TYROOONE"
+      name = "About me"
       url = "aboutme"
 
     [[params.navigation.links]]
       name = "Generic Blog"
-      url = "blogs/ipsum"
+      url = "projects/thesis"
 
     [[params.navigation.links]]
       name = "Elements"
@@ -93,15 +93,15 @@ disqusShortname = ""
     
     [[params.tiles.showcase]]
       title = "About me"
-      subtitle = "Analysing the impact of Covid-19 on US elections"
+      subtitle = "Introduction - Erkka Salo"
       image = "me.jpg"
       url = "aboutme"
 
     [[params.tiles.showcase]]
-      title = "About me"
-      subtitle = "Feugiat Amet Tempus"
-      image = "fuck.jpg"
-      url = "aboutme"
+      title = "Gaining while acting green?"
+      subtitle = "Return comparison of sustainable- and conventional REITs"
+      image = "thesis.jpg"
+      url = "projects"
 
     [[params.tiles.showcase]]
       title = "Magna"
