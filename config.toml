@@ -20,7 +20,7 @@ disqusShortname = ""
 
   # Provide your metadata here.
   name = "Erkka Salo"
-  description = "Your description"
+  description = "I am an ambitious masters student at London Business School. I am fond fan of diversity, meeting new people and sports. This website is to showcase some of my analyses conducted with R"
 
   # Link custom assets relative to /static
   custom_css = []
