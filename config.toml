@@ -92,10 +92,10 @@ disqusShortname = ""
     # Display your showcases here.
     
     [[params.tiles.showcase]]
-      title = "Aliquam"
-      subtitle = "Ipsum Dolor Sit Amet"
+      title = "Covid-19/US elections"
+      subtitle = "Analysing the impact of Covid-19 on US elections"
       image = "pic01.jpg"
-      url = "blogs/aliquam"
+      url = "blogs/blog5"
 
     [[params.tiles.showcase]]
       title = "Tempus"
