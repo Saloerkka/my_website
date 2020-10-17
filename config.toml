@@ -116,10 +116,10 @@ disqusShortname = ""
       url = "projects/covid"
 
     [[params.tiles.showcase]]
-      title = "Consequat"
-      subtitle = "Ipsum Dolor Sit Amet"
+      title = "2016 US elections"
+      subtitle = "Top cities and candidates monetarily"
       image = "pic05.jpg"
-      url = "blogs/ipsum"
+      url = "projects/elections"
 
     [[params.tiles.showcase]]
       title = "Etiam"
