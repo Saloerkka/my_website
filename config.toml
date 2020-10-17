@@ -117,15 +117,15 @@ disqusShortname = ""
 
     [[params.tiles.showcase]]
       title = "2016 US elections"
-      subtitle = "Top cities and candidates monetarily"
+      subtitle = "Top cities and candidates by contributions"
       image = "elections.jpg"
       url = "projects/elections"
 
     [[params.tiles.showcase]]
-      title = "Etiam"
-      subtitle = "Feugiat Amet Tempus"
-      image = "pic06.jpg"
-      url = "blogs/ipsum"
+      title = "Yield curve analysis"
+      subtitle = "Curve inversion in the current environment"
+      image = "yield.jpg"
+      url = "projects/yield"
     # You can make more showcases by copy and pasting the code above
 
   [params.blog]
