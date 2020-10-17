@@ -3,12 +3,12 @@ categories:
 - ""
 - ""
 date: "2017-10-31T22:26:09-05:00"
-description: Lorem Etiam Nullam
+description: Home back North
 draft: false
-image: pic09.jpg
+image: finland.jpg
 keywords: ""
-slug: test2
-title: Magna
+slug: blog4
+title: Finland
 ---
 
 Work in Progress
