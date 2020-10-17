@@ -1,5 +1,5 @@
 # Site settings
-baseURL = "https://erkka-salo-portfolio.netlify.ap"
+baseURL = "https://erkka-salo-portfolio.netlify.app"
 languageCode = "en-us"
 title = "Erkka"
 theme = "forty"
