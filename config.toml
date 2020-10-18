@@ -95,13 +95,13 @@ disqusShortname = ""
       title = "About me"
       subtitle = "Introduction - Erkka Salo"
       image = "me.jpg"
-      url = "aboutme"
+      url = "aboutme/aboutme"
 
     [[params.tiles.showcase]]
       title = "Lifestyle"
       subtitle = "Healthy routines"
       image = "health.jpg"
-      url = "health"
+      url = "health/health"
 
     [[params.tiles.showcase]]
       title = "Gaining while acting green?"
@@ -139,11 +139,7 @@ disqusShortname = ""
   [params.two]
     enable = true
     title = "Snapshots on my leisure time"
-    subtitle = """Nullam et orci eu lorem consequat tincidunt vivamus et sagittis libero. 
-    Mauris aliquet magna magna sed nunc rhoncus pharetra. 
-    Pellentesque condimentum sem. In efficitur ligula tate urna. Maecenas laoreet massa vel lacinia pellentesque lorem ipsum dolor. 
-    Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis libero.
-    Mauris aliquet magna magna sed nunc rhoncus amet pharetra et feugiat tempus."""
+    subtitle = "Random pictures""
     buttonText = "Discover"
     url = "blogs"
 
