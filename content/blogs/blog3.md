@@ -7,6 +7,6 @@ description: "The Land of the Gods and temples"
 draft: false
 image: bali.jpg
 keywords: ""
-slug: blogs
+slug: blog3
 title: Bali
 ---
