@@ -172,7 +172,7 @@ disqusShortname = ""
 
     [[params.contact.phone]]
     title = "Phone"
-    phone = "+358 40 1690787"
+    phone = "+358401690787"
 
     [[params.contact.address]]
     title = "Address"
