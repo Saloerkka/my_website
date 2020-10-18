@@ -140,7 +140,7 @@ disqusShortname = ""
     enable = true
     title = "Snapshots on my leisure time"
     subtitle = "Random pictures"
-    buttonText = "Discover"
+    buttonText = "Discover!"
     url = "blogs"
 
 
