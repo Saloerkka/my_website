@@ -95,13 +95,13 @@ disqusShortname = ""
       title = "About me"
       subtitle = "Introduction - Erkka Salo"
       image = "me.jpg"
-      url = "aboutme/aboutme"
+      url = "aboutme"
 
     [[params.tiles.showcase]]
       title = "Lifestyle"
       subtitle = "Healthy routines"
       image = "health.jpg"
-      url = "health/health"
+      url = "health"
 
     [[params.tiles.showcase]]
       title = "Gaining while acting green?"
