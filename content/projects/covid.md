@@ -3,15 +3,17 @@ categories:
 - ""
 - ""
 date: "2017-10-31T22:26:09-05:00"
-description: Mortality and recovery analysis of Covid-19 in the UK
+description: Mortality and recovery analysis of Covid-19 in the US
 draft: false
 image: covid.jpg
 keywords: ""
 slug: covid
-title: Mortality and recovery analysis of Covid-19 in the UK
+title: Mortality and recovery analysis of Covid-19 in the US
 ---
 
-Let us revisit the [CDC Covid-19 Case Surveillance Data](https://data.cdc.gov/Case-Surveillance/COVID-19-Case-Surveillance-Public-Use-Data/vbim-akqf). There are well over 3 million entries of individual, de-identified patient data. Since this is a large file, I suggest to use `vroom` to load it and you keep `cache=TRUE` in the chunk options.
+Let us revisit the [CDC Covid-19 Case Surveillance Data](https://data.cdc.gov/Case-Surveillance/COVID-19-Case-Surveillance-Public-Use-Data/vbim-akqf). The COVID-19 case surveillance system database includes patient-level data reported to U.S. states and autonomous reporting entities, including New York City and the District of Columbia (D.C.), as well as U.S. territories and states. 
+
+There are well over 3 million entries of individual, de-identified patient data. Since this is a large file, I suggest to use `vroom` to load it and you keep `cache=TRUE` in the chunk options.
 
 
 ```{r, cache=TRUE}
