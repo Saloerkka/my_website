@@ -128,6 +128,11 @@ disqusShortname = ""
       url = "projects/yield"
     # You can make more showcases by copy and pasting the code above
 
+[[params.footer.social]]
+      icon = "fa-envelope"
+      url= "esalo.mfa2021@london.edu"
+      label = "Email"
+
   [params.blog]
     # All blogs defined in their own files. You can find example blogs
     # at 'exampleSite/content/blogs'. Copy the 'blogs' folder into the 'content' directory

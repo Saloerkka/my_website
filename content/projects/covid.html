@@ -1,0 +1,88 @@
+---
+categories:
+- ""
+- ""
+date: "2017-10-31T22:26:09-05:00"
+description: Mortality and recovery analysis of Covid-19 in the US
+draft: false
+image: covid.jpg
+keywords: ""
+slug: covid
+title: Mortality and recovery analysis of Covid-19 in the US
+---
+
+
+
+<p>Let us revisit the <a href="https://data.cdc.gov/Case-Surveillance/COVID-19-Case-Surveillance-Public-Use-Data/vbim-akqf">CDC Covid-19 Case Surveillance Data</a>. The COVID-19 case surveillance system database includes patient-level data reported to U.S. states and autonomous reporting entities, including New York City and the District of Columbia (D.C.), as well as U.S. territories and states.</p>
+<p>There are well over 3 million entries of individual, de-identified patient data. Since this is a large file, I suggest to use <code>vroom</code> to load it and you keep <code>cache=TRUE</code> in the chunk options.</p>
+<pre class="r"><code># file contains 11 variables and 3.66m rows and is well over 380Mb. 
+# It will take time to download
+
+# URL link to CDC to download data
+url &lt;- &quot;https://data.cdc.gov/api/views/vbim-akqf/rows.csv?accessType=DOWNLOAD&quot;
+
+covid_data &lt;- vroom::vroom(url)%&gt;% 
+  clean_names()</code></pre>
+<pre><code>## Rows: 4,481,062
+## Columns: 11
+## Delimiter: &quot;,&quot;
+## chr  [8]: current_status, sex, age_group, Race and ethnicity (combined), hosp_yn, icu_yn...
+## date [3]: cdc_report_dt, pos_spec_dt, onset_dt
+## 
+## Use `spec()` to retrieve the guessed column specification
+## Pass a specification to the `col_types` argument to quiet this message</code></pre>
+<p>Covid_19 death rate (%) by age group, sex, and whether the patient had co-morbidities or not:</p>
+<pre class="r"><code>  #Removing useless variables
+removed_val=c(&quot;Missing&quot;, &quot;Unknown&quot;, &quot;Other&quot;, NA)
+
+
+death_rate_condition &lt;- covid_data %&gt;%
+select(medcond_yn, death_yn, sex, age_group) %&gt;% 
+  #Removing the variables linked to &quot;missing&quot;, &quot;unknown&quot;, &quot;Other&quot;   and    NA
+filter(!(death_yn %in% removed_val) ,
+      !(medcond_yn %in% removed_val), 
+      !(sex %in% removed_val),
+      !(age_group %in% removed_val),)  %&gt;%
+mutate(death = ifelse(death_yn == &quot;Yes&quot;, 1, 0), co_mor=
+ifelse(medcond_yn == &quot;Yes&quot;, &quot;With Comorbidities&quot;, &quot;Without
+Comorbidities&quot;)) %&gt;% group_by(age_group, sex, co_mor) %&gt;%
+summarize(death_rate = prop(death))</code></pre>
+<pre><code>## Warning: `data_frame()` is deprecated as of tibble 1.1.0.
+## Please use `tibble()` instead.
+## This warning is displayed once every 8 hours.
+## Call `lifecycle::last_warnings()` to see where this warning was generated.</code></pre>
+<pre><code>## `summarise()` regrouping output by &#39;age_group&#39;, &#39;sex&#39; (override with `.groups` argument)</code></pre>
+<pre class="r"><code>ggplot(death_rate_condition, aes(x=death_rate, y=age_group)) +
+geom_col(fill=&quot;#000099&quot;, alpha=0.8) + facet_grid(rows=vars(co_mor),cols
+= vars (sex)) +
+  #Scales function seemed to be masked
+scale_x_continuous(labels = scales::percent) +  theme_bw()+
+geom_text(aes(label=round(death_rate*100, 2)),
+position=position_dodge(width=0.8), hjust=-0.06, size=1.8) + 
+labs (title = &quot;Covid death % by age group, sex and presence of co-morbidities&quot;, caption=&quot;Source: CDC&quot;, x= &quot;&quot;, y= &quot;&quot;) + theme(text=element_text(size=5), axis.text.y = element_text(size = 4))</code></pre>
+<p><img src="/projects/covid_files/figure-html/covid_challenge1.1-1.png" width="100%" /></p>
+<p>Covid_19 death rate (%) by age group, sex, and whether the patient was admited
+to Intensive Care Unit (ICU) or not:</p>
+<pre class="r"><code>  #Removing useless variables
+removed_val=c(&quot;Missing&quot;, &quot;Unknown&quot;, &quot;Other&quot;, NA)
+
+death_rate_icu &lt;- covid_data %&gt;%
+select(icu_yn, death_yn, sex, age_group) %&gt;% 
+  #Removing the variables linked to &quot;missing&quot;, &quot;unknown&quot;, &quot;Other&quot;   and    NA 
+filter(!(death_yn %in% removed_val) ,
+      !(icu_yn %in% removed_val), 
+      !(sex %in% removed_val),
+      !(age_group %in% removed_val),)  %&gt;%
+mutate(death = ifelse(death_yn == &quot;Yes&quot;, 1, 0), 
+icu= ifelse(icu_yn == &quot;Yes&quot;, &quot;Admitted to ICU&quot;, &quot;No ICU&quot;)) %&gt;%
+group_by(age_group, sex, icu) %&gt;% 
+summarize(death_rate = prop(death))</code></pre>
+<pre><code>## `summarise()` regrouping output by &#39;age_group&#39;, &#39;sex&#39; (override with `.groups` argument)</code></pre>
+<pre class="r"><code>ggplot(death_rate_icu, aes(x=death_rate, y=age_group)) +  geom_col(fill=&quot;#FF0000&quot;, alpha=0.8) + 
+facet_grid(rows=vars(icu), cols = vars (sex)) +
+  #Scales function seemed to be masked
+scale_x_continuous(labels = scales::percent) +  theme_bw()+
+geom_text(aes(label=round(death_rate*100, 2)),position=position_dodge(width=0.8), hjust=-0.06, size=1.8) + 
+labs (title = &quot;Covid death % by age group, sex and and whether patient was admitted to ICU&quot;, caption=&quot;Source: CDC&quot;, x= &quot;&quot;, y= &quot;&quot;) +
+theme(text=element_text(size=5), axis.text.y = element_text(size = 4))</code></pre>
+<p><img src="/projects/covid_files/figure-html/covid_challenge1.2-1.png" width="100%" /></p>
