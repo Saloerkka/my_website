@@ -1,0 +1,107 @@
+---
+title: "2016 US Elections"
+date: '2017-10-31T22:26:09-05:00'
+description: 2016 US Elections
+draft: no
+image: elections.jpg
+keywords: ''
+slug: elections
+categories:
+- ''
+- ''
+---
+
+
+
+<p>I would like you to reproduce the plot that shows the top ten cities in highest amounts raised in political contributions in California during the 2016 US Presidential election.</p>
+<p><img src="C:/Users/erkka/OneDrive/Työpöytä/my_website/images/challenge2.png" width="100%" /></p>
+<pre><code>## Rows: 1,292,843
+## Columns: 4
+## Delimiter: &quot;,&quot;
+## chr  [1]: cand_nm
+## dbl  [2]: contb_receipt_amt, zip
+## date [1]: contb_date
+## 
+## Use `spec()` to retrieve the guessed column specification
+## Pass a specification to the `col_types` argument to quiet this message</code></pre>
+<pre><code>## Rows: 42,522
+## Columns: 16
+## Delimiter: &quot;,&quot;
+## chr [11]: zip, type, primary_city, acceptable_cities, unacceptable_cities, state, county, ...
+## dbl [ 4]: latitude, longitude, decommissioned, estimated_population
+## 
+## Use `spec()` to retrieve the guessed column specification
+## Pass a specification to the `col_types` argument to quiet this message</code></pre>
+<pre><code>## `summarise()` ungrouping output (override with `.groups` argument)</code></pre>
+<pre><code>## # A tibble: 10 x 2
+##    primary_city  total_amount
+##    &lt;chr&gt;                &lt;dbl&gt;
+##  1 Los Angeles      16608405.
+##  2 San Francisco    15716677.
+##  3 Oakland           3940076.
+##  4 San Diego         3932830.
+##  5 Palo Alto         3375370.
+##  6 Beverly Hills     3267148.
+##  7 Berkeley          3104403.
+##  8 Santa Monica      2926874.
+##  9 San Jose          2445544.
+## 10 Sacramento        2384442.</code></pre>
+<pre><code>## `summarise()` ungrouping output (override with `.groups` argument)</code></pre>
+<pre><code>## # A tibble: 10 x 2
+##    cand_nm                   total_amount
+##    &lt;chr&gt;                            &lt;dbl&gt;
+##  1 Clinton, Hillary Rodham      94784569.
+##  2 Sanders, Bernard             20649084.
+##  3 Trump, Donald J.             14064776.
+##  4 Cruz, Rafael Edward &#39;Ted&#39;     6075175.
+##  5 Rubio, Marco                  5595281.
+##  6 Bush, Jeb                     3357550.
+##  7 Carson, Benjamin S.           3145278.
+##  8 Kasich, John R.               1571849.
+##  9 Fiorina, Carly                1501113.
+## 10 Paul, Rand                     823542.</code></pre>
+<pre><code>## `summarise()` ungrouping output (override with `.groups` argument)</code></pre>
+<pre><code>## # A tibble: 10 x 2
+##    primary_city  total_amount
+##    &lt;fct&gt;                &lt;dbl&gt;
+##  1 San Francisco    12345963.
+##  2 Los Angeles      12022399.
+##  3 Oakland           2955387.
+##  4 Palo Alto         2664346.
+##  5 Berkeley          2300980.
+##  6 Beverly Hills     2226442.
+##  7 Santa Monica      2134503.
+##  8 San Diego         2094960.
+##  9 Sacramento        1623772.
+## 10 Los Altos         1500963.</code></pre>
+<pre><code>## `summarise()` ungrouping output (override with `.groups` argument)</code></pre>
+<pre><code>## # A tibble: 10 x 2
+##    primary_city    total_amount
+##    &lt;fct&gt;                  &lt;dbl&gt;
+##  1 Los Angeles          544464.
+##  2 San Diego            482885.
+##  3 Newport Beach        347206.
+##  4 Bakersfield          244419.
+##  5 San Francisco        230712.
+##  6 San Jose             190652.
+##  7 Fresno               182674.
+##  8 Rancho Santa Fe      178233.
+##  9 Sacramento           171656.
+## 10 Irvine               157518.</code></pre>
+<p><img src="/projects/elections_files/figure-html/challenge2-2.png" width="100%" /><img src="/projects/elections_files/figure-html/challenge2-3.png" width="100%" /><img src="/projects/elections_files/figure-html/challenge2-4.png" width="100%" /></p>
+<pre><code>## `summarise()` ungrouping output (override with `.groups` argument)</code></pre>
+<pre><code>## # A tibble: 10 x 2
+##    cand_nm                   total_amount
+##    &lt;chr&gt;                            &lt;dbl&gt;
+##  1 Clinton, Hillary Rodham      94784569.
+##  2 Sanders, Bernard             20649084.
+##  3 Trump, Donald J.             14064776.
+##  4 Cruz, Rafael Edward &#39;Ted&#39;     6075175.
+##  5 Rubio, Marco                  5595281.
+##  6 Bush, Jeb                     3357550.
+##  7 Carson, Benjamin S.           3145278.
+##  8 Kasich, John R.               1571849.
+##  9 Fiorina, Carly                1501113.
+## 10 Paul, Rand                     823542.</code></pre>
+<pre><code>## `summarise()` regrouping output by &#39;primary_city&#39; (override with `.groups` argument)</code></pre>
+<p><img src="/projects/elections_files/figure-html/challenge2-5.png" width="100%" /></p>

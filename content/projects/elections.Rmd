@@ -1,14 +1,14 @@
 ---
-categories:
-- ""
-- ""
-date: "2017-10-31T22:26:09-05:00"
+title: "2016 US Elections"
+date: '2017-10-31T22:26:09-05:00'
 description: 2016 US Elections
-draft: false
+draft: no
 image: elections.jpg
-keywords: ""
+keywords: ''
 slug: elections
-title: 2016 US Elections 
+categories:
+- ''
+- ''
 ---
 
 I would like you to reproduce the plot that shows the top ten cities in highest amounts raised in political contributions in California during the 2016 US Presidential election.
