@@ -32,8 +32,8 @@ disqusShortname = ""
 
   # 404 error customization
   [params.error404]
-    heading = "Page couldn't be found"
-    text = "Please visit [this page](/)"
+    heading = "Let's get in touch!"
+    text = "Email: esalo.MFA2021@london.edu, Tel: +358401690787"
 
   # Navigation Section
   [params.navigation]
