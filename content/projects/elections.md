@@ -13,6 +13,27 @@ title: 2016 US Elections
 
 I would like you to reproduce the plot that shows the top ten cities in highest amounts raised in political contributions in California during the 2016 US Presidential election.
 
+
+```{r load-libraries, warning=FALSE, message=FALSE, echo=FALSE}
+library(tidyverse)  # Load ggplot2, dplyr, and all the other tidyverse packages
+library(mosaic)
+library(ggthemes)
+library(lubridate)
+library(fivethirtyeight)
+library(here)
+library(skimr)
+library(janitor)
+library(vroom)
+library(tidyquant)
+library(rvest)    # scrape websites
+library(purrr)  
+library(lubridate) #to handle dates
+library(patchwork)
+library(dplyr)
+library(tidytext)
+
+```
+
 ```{r challenge2, echo=FALSE, out.width="100%"}
 
 knitr::include_graphics(here::here("images", "challenge2.png"), error = FALSE)
